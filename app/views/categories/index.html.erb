@@ -1,0 +1,35 @@
+<h1>List of Categories</h1>
+
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 50%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+
+<table>
+  <tr>
+    <th>Category Name</th>
+  </tr>
+
+  <% @categories.each do |category|%>
+  <tr>
+    <td><%= link_to category.name, category_path(category.id)%></td>
+  </tr>
+  <%end%>
+  
+</table>
+<br>
+
+<%= link_to "Create New Category", new_category_path %>

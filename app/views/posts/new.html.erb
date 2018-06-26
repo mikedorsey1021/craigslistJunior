@@ -1,0 +1,11 @@
+<h1>Create new Post</h1>
+
+<%= form_for [@category, @post] do |f| %>
+  <%= label_tag(:post, "post Name:") %>
+  <%= text_field(:post, :name) %><br>
+  <%= label_tag(:post, "post Author:") %>
+  <%= text_field(:post, :author) %><br>
+  <%= label_tag(:post, "post Text:") %>
+  <%= text_field(:post, :body) %><br>
+  <%= f.submit %>
+<% end %>

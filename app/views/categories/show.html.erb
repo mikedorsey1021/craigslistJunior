@@ -1,0 +1,11 @@
+<h1>This is category <%= @category.name%></h1>
+
+<h3>Has <%= @category.posts.count%> post.</h3>
+
+<h4>Click <%= link_to "here", category_posts_path(@category) %> to view a list of post.</h4>
+
+
+
+<%= link_to "Back", categories_path%><br>
+<%= link_to "Edit", edit_category_path%><br>
+<%= link_to "delete category", category_path, method: 'delete'%>
